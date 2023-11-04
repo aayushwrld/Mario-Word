@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    font-family: "Press Start 2P", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(./assets/Background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+}
+
+.clouds{
+    overflow-x: hidden;
+    height: 20vh;
+    overflow-y: hidden;
+}
+
+#cloud1{
+    animation: cloud 18s linear infinite;
+    position: relative;
+    top: 7px;
+    height: 50px;
+    width: 100px;
+}
+
+#cloud2{
+    animation: cloud 23s linear infinite;
+    position: relative;
+    left: -150px;
+    top: 40px;
+}
+
+#cloud3{
+    animation: cloud 16s linear infinite;
+    position: relative;
+    left: -320px;
+    top: 10px;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(110vw)
+    }
+}
+
+.home-button{
+    position: absolute;
+    padding: 20px;
+    z-index: 1;
+}
+
+.home-button img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.home-button img:active{
+    transform: scale(0.90);
+}
+
+.home-button img{
+    height: 55px;
+    width: 55px;
+    transition: all 0.2s;
+}
+
+.headings{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4vh;
+}
+
+.instructions-heading{
+    font-size: 4rem;
+    color: yellow;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+}
+
+.username{
+    font-size: 3rem;
+    color: yellow;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+.username-group{
+    position: relative;
+}
+
+.username-input{
+    color: black;
+    padding: 20px;
+    font-size: 2em;
+    border: none;
+    border-radius: 4px;
+    outline: 2px dashed black;
+    background-color: transparent;
+    transition: outline-color 250ms;
+}
+
+.username-label{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    font-size: 1.5em;
+    left: 0;
+    transform: translate(15px,25px);
+    transform-origin: left;
+    color: grey;
+    transition: transform 200ms;
+}
+
+.username-input:focus + .username-label{
+    transform: translate(-2px,-35px) scale(0.8);
+    color: yellow;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+#username-filled,#username-submission{
+    margin-top: 1.5vh;
+    font-size: 1.2em;
+    line-height: 40px;
+}
+.choose-theme{
+    margin-top: 3.5vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.theme-heading{
+    font-size: 2.5rem;
+    color: yellow;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: black;
+}
+
+#theme-1{
+    width: 200px;
+}
