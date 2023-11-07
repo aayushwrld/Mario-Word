@@ -12,6 +12,8 @@ body{
     background-size: 100% 100%;
     height: 100vh;
     width: 100vw;
+    cursor: url('./assets/cursor-default.png'), auto;
+
 }
 
 .home-button{
@@ -21,7 +23,7 @@ body{
 }
 
 .home-button img:hover{
-    cursor: pointer;
+    cursor: url('./assets/cursor-pointer.png'), auto;
     transform: scale(1.1);
 }
 
@@ -93,7 +95,6 @@ body{
     margin-bottom: 3vh;
 }
 
-
 .instructions li{
     margin-top: 20px;
     line-height: 3vh;
@@ -110,15 +111,227 @@ body{
 
 #play-button:hover{
     scale: 1.1;
-    cursor: pointer;
+    cursor: url('./assets/cursor-pointer.png'), auto;
+
     color: yellow;
     text-shadow: 4px 2px 2px black;
 }
 
 .mario-image{
+    margin-top: 4vh;
     margin-left: 10vw;
+    width: 70vw;
 }
 
 #mario{
     width: 100px;
+    animation: mario-walking 25s linear 0.8s infinite ;
+}
+
+@keyframes mario-walking {
+    0%{
+        transform: translateX(0%) translateY(-10px);
+    }
+    48.5%{
+        transform: translateX(60vw);
+    }
+    50%{
+        transform: translateX(60vw) scaleX(-1);
+    }
+    98.5%{
+        transform: scaleX(-1);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width:  424px) and (min-width: 0px){
+    body{
+        background-size: cover;
+        height: 100vh;
+    }
+
+    #mario{
+        width: 70px;
+    }
+
+    .mario-image{
+        margin-top: 7vh;
+        margin-left: 10vw;
+    }
+    .clouds{
+        height: 15vh;
+    }
+
+    #cloud1{
+        animation: cloud 15s linear infinite;
+    }
+
+    #cloud2{
+        animation: cloud 12s linear infinite;
+        width: 70px;
+
+    } #cloud3{
+        animation: cloud 18s linear infinite;
+        width: 80px;
+    }
+    .home-button{
+        padding: 10px;
+    }
+    .home-button img{
+        width: 40px;
+        height: 40px;
+    }
+    .instructions-heading{
+        font-size: 1.5rem;
+        -webkit-text-stroke-width: 1.8px;
+    }
+    .instructions{
+        width: 50%;
+        padding-left: 40px;
+        font-size: 0.5rem;
+        margin-top: 20px;
+        color: black;
+        -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+    }
+    .instructions li{
+        margin-top: 10px;
+        line-height: 2vh;
+    }
+
+    #play-button{
+        font-size: 2rem;
+        color: white;
+        -webkit-text-stroke-width: 2.6px;
+        -webkit-text-stroke-color: black;
+        width: 100%;
+    }
+}
+
+@media (min-width:  425px) and (max-width: 580px){
+    body{
+        background-size: cover;
+        height: 100vh;
+    }
+
+    #mario{
+        width: 80px;
+    }
+
+    .mario-image{
+        margin-top: 2vh;
+        margin-left: 10vw;
+    }
+    .clouds{
+        height: 15vh;
+    }
+
+    #cloud1{
+        animation: cloud 15s linear infinite;
+    }
+
+    #cloud2{
+        animation: cloud 12s linear infinite;
+        width: 70px;
+
+    } #cloud3{
+        animation: cloud 18s linear infinite;
+        width: 80px;
+    }
+    .home-button{
+        padding: 10px;
+    }
+    .home-button img{
+        width: 40px;
+        height: 40px;
+    }
+    .instructions-heading{
+        font-size: 1.9rem;
+        -webkit-text-stroke-width: 1.8px;
+    }
+    .instructions{
+        width: 70%;
+        padding-left: 40px;
+        font-size: 0.8rem;
+        margin-top: 20px;
+        color: black;
+        -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+    }
+    .instructions li{
+        margin-top: 10px;
+        line-height: 2.2vh;
+    }
+
+    #play-button{
+        font-size: 2.5rem;
+        color: white;
+        -webkit-text-stroke-width: 2.6px;
+        -webkit-text-stroke-color: black;
+        width: 100%;
+    }
+}
+
+@media (min-width:  581px) and (max-width: 1024px){
+    body{
+        background-size: cover;
+        height: 100vh;
+    }
+
+    #mario{
+        width: 70px;
+    }
+
+    .mario-image{
+        margin-top: 2vh;
+        margin-left: 10vw;
+    }
+    .clouds{
+        height: 20vh;
+    }
+
+    #cloud1{
+        animation: cloud 30s linear infinite;
+        width: 90px;
+    }
+
+    #cloud2{
+        animation: cloud 22s linear infinite;
+        width: 100px;
+
+    } #cloud3{
+        animation: cloud 18s linear infinite;
+        width: 80px;
+    }
+    .home-button{
+        padding: 10px;
+    }
+    .home-button img{
+        width: 40px;
+        height: 40px;
+    }
+    .instructions-heading{
+        font-size: 3rem;
+        -webkit-text-stroke-width: 3px;
+    }
+    .instructions{
+        padding-left: 60px;
+        width: 80%;
+        font-size: 0.8rem;
+        margin-top: 20px;
+        color: black;
+    }
+    .instructions li{
+        margin-top: 10px;
+        line-height: 3vh;
+    }
+    #play-button{
+        font-size: 2.5rem;
+        color: white;
+        -webkit-text-stroke-width: 2.6px;
+        -webkit-text-stroke-color: black;
+        width: 100%;
+    }
 }

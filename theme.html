@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="./theme.css">
     <title>Mario Word</title>
 </head>
 <body>
 <div class="parent">
     <div class="home-button">
-        <img id="home-button-image" src="./assets/home-button.png" alt="">
+        <img id="home-button-image" src="./assets/home-button.png" alt="" >
+        <img src="./assets/question-icon.png" alt="" id="question-button-image">
     </div>
-        <div class="clouds">
+    <div class="questions-answers">
+        <div class="answers">
+        <span>What do you have to do?</span>
+        <br>
+        <br>
+        <br>
+        <span id="answer-points">•	Enter your desired username if you haven't entered already.</span>
+        <br><br>
+        <span id="answer-points">•	After entering your username, you can choose the theme of the word you want, and the game will start!</span>
+        </div>
+    </div>
+    <div class="clouds">
         <img src="assets/cloud1.png" alt="cloud1" id="cloud1">
         <img src="assets/cloud2.png" alt="cloud2" id="cloud2">
         <img src="assets/cloud1.png" alt="cloud3" id="cloud3">
-        </div>
+    </div>
     <div class="headings">
             <div class="username-group">
-                <input type="text" class="username-input" id="username" required>
-                <label class="username-label" id="label">Enter Name</label>
+                <input type="text" class="username-input" id="username" autocomplete="off" required>
+                <label class="username-label" id="label" >Enter Name</label>
             </div>
                 <p id="username-filled"></p>
                 <p id="username-submission">Press <i>Enter</i> to submit!</p>
@@ -28,8 +40,12 @@
     <div class="choose-theme">
         <div class="theme-heading"><span>Choose Theme</span></div>
         <div class="themes">
-            <img src="assets/theme-1.png" alt="" id="theme-1">
+            <img src="./assets/theme-1.png" alt="" id="theme-1">
+            <img src="./assets/theme-2.png" alt="" id="theme-2">
         </div>
+    </div>
+    <div class="mario-image">
+        <img src="./assets/Mario Walk - Fall/MarioStandLarge.png" alt="" id="mario">
     </div>
 </div>
     <script src="theme.js"></script>

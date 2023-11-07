@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    font-family: "Press Start 2P",sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(./assets/Background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    cursor: url('./assets/cursor-default.png'), auto;
+}
+
+.result-play-again{
+    z-index: 2;
+    position: absolute;
+    background-color: blue;
+    width: 100vw;
+    height: 100vh;
+    background: rgba( 81, 218, 221, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    display: flex;
+}
+
+
+#play-button span:hover{
+    cursor: url('./assets/cursor-pointer.png'), auto;
+}
+
+.clouds{
+    overflow-x: hidden;
+    height: 20vh;
+    overflow-y: hidden;
+}
+
+#cloud1{
+    animation: cloud 25s linear infinite;
+    position: relative;
+    top: 7px;
+    height: 50px;
+    width: 100px;
+}
+
+#cloud2{
+    animation: cloud 19s linear infinite;
+    position: relative;
+    left: -150px;
+    top: 40px;
+}
+
+#cloud3{
+    animation: cloud 29s linear infinite;
+    position: relative;
+    left: -320px;
+    top: 10px;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(110vw)
+    }
+}
+
+.stars{
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    top: 3vh;
+    left: 40vw;
+    z-index: 1;
+    width: 20%;
+}
+
+.right-buttons{
+    position: absolute;
+    padding: 20px;
+    z-index: 1;
+    display: flex;
+    right: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#username{
+    padding: 0px 50px 0px 15px;
+    transition: transform 0.5s ease;
+    color: black;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+}
+
+#username-img {
+    cursor: url('./assets/cursor-pointer.png'), auto;
+
+}
+
+.right-buttons img:hover{
+    cursor: url('./assets/cursor-pointer.png'), auto;
+    transform: scale(1.1);
+}
+
+.right-buttons img:active{
+    transform: scale(0.95);
+}
+
+.right-buttons img{
+    height: 50px;
+    width: 50px;
+    transition: all 0.2s;
+}
+
+#username-img{
+    width: 30px;
+    height: 30px;
+}
+
+.questions-answers{
+    position: absolute;
+    background-image: url("./assets/question-followup.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 400px;
+    height: 300px;
+    right: 4.5vw;
+    top: 9vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers{
+    width: 310px;
+    height: 240px;
+}
+
+.questions-answers {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#answer-points{
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.word{
+    margin-top: 10vh;
+    margin-left: 10vw;
+    width: 40%;
+    text-align: center;
+}
+
+.word span{
+    font-size: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.parent-keyboard{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parent-keyboard-row-1, .parent-keyboard-row-2, .parent-keyboard-row-3{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.parent-keyboard-row-1{
+    width: 100%;
+}
+.parent-keyboard-row-2{
+    width: 90%;
+}
+
+
+.parent-keyboard-row-3{
+    width: 80%;
+}
+
+.keyboard-row-1, .keyboard-row-2, .keyboard-row-3{
+    background-image: url("./assets/keyword.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.2s ease;    
+}
+
+
+.keyboard-row-1:hover,  .keyboard-row-2:hover, .keyboard-row-3:hover{
+    scale: 1.05;
+    cursor: url('./assets/cursor-pointer.png'), auto;
+
+}
+
+.keyboard-row-1:active, .keyboard-row-2:active, .keyboard-row-3:active{
+    scale: 0.95;
+}
+
+.mario-image{
+    margin-left: 4vw;
+    position: relative;
+    z-index: 1;
+}
+
+#mario{
+    width: 90px;
+    position: absolute;
+    transition: all 2s ease;
+    top: 0;
+}
+
+.plank{
+    position: relative;
+    top: 12vh;
+}
+
+.plank img{
+    width: 42vw;
+}
+
+.hints{
+    position: absolute;
+    background-image: url('./assets/hints.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    z-index: 1;
+    top: 5vh;
+    left: 5vw;
+}
+
+#hint{
+    padding: 15px 30px 15px 20px;
+}
+
+.spikes{
+    position: absolute;
+    left: 40%;
+    bottom: 14vh;
+}
+

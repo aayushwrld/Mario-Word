@@ -12,6 +12,7 @@ body{
     background-size: 100% 100%;
     height: 100vh;
     width: 100vw;
+    cursor: url('./assets/cursor-default.png'), auto;
 }
 
 .clouds{
@@ -21,7 +22,7 @@ body{
 }
 
 #cloud1{
-    animation: cloud 18s linear infinite;
+    animation: cloud 25s linear infinite;
     position: relative;
     top: 7px;
     height: 50px;
@@ -29,14 +30,14 @@ body{
 }
 
 #cloud2{
-    animation: cloud 23s linear infinite;
+    animation: cloud 19s linear infinite;
     position: relative;
     left: -150px;
     top: 40px;
 }
 
 #cloud3{
-    animation: cloud 16s linear infinite;
+    animation: cloud 29s linear infinite;
     position: relative;
     left: -320px;
     top: 10px;
@@ -55,21 +56,55 @@ body{
     position: absolute;
     padding: 20px;
     z-index: 1;
+    display: flex;
+    width: 97%;
+    justify-content: space-between;
 }
 
 .home-button img:hover{
-    cursor: pointer;
+    cursor: url('./assets/cursor-pointer.png'), auto;
+
     transform: scale(1.1);
 }
 
 .home-button img:active{
-    transform: scale(0.90);
+    transform: scale(0.95);
 }
 
 .home-button img{
     height: 55px;
     width: 55px;
     transition: all 0.2s;
+}
+
+.questions-answers{
+    position: absolute;
+    background-image: url("./assets/question-followup.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 400px;
+    height: 300px;
+    right: 4.5vw;
+    top: 9vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers{
+    width: 310px;
+    height: 240px;
+}
+
+.questions-answers {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#answer-points{
+    line-height: 20px;
+    font-size: 13px;
 }
 
 .headings{
@@ -122,7 +157,7 @@ body{
 }
 
 .username-input:focus + .username-label{
-    transform: translate(-2px,-35px) scale(0.8);
+    transform: translate(-0.1px,-35px) scale(0.8);
     color: yellow;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
@@ -133,12 +168,15 @@ body{
     font-size: 1.2em;
     line-height: 40px;
 }
+
 .choose-theme{
-    margin-top: 3.5vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+    /* pointer-events: none; */
 }
 
 .theme-heading{
@@ -148,6 +186,55 @@ body{
     -webkit-text-stroke-color: black;
 }
 
-#theme-1{
+.themes{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 8vh;
+    flex-wrap: wrap;
+}
+
+#theme-1, #theme-2{
     width: 200px;
+    transition: all 0.2s;
+}
+
+#theme-1:hover, #theme-2:hover{
+    cursor: url('./assets/cursor-pointer.png'), auto;
+
+    box-shadow: 2px 2px 4px black;
+    scale: 0.95;
+}
+
+#theme-1:active, #theme-2:active{
+    scale: 0.90;
+}
+
+.mario-image{
+    margin-top: 10vh;
+    margin-left: 10vw;
+    width: 70vw;
+}
+
+#mario{
+    width: 100px;
+    animation: mario-walking 25s linear 0.8s infinite ;
+}
+
+@keyframes mario-walking {
+    0%{
+        transform: translateX(0%) translateY(-10px);
+    }
+    48.5%{
+        transform: translateX(60vw);
+    }
+    50%{
+        transform: translateX(60vw) scaleX(-1);
+    }
+    98.5%{
+        transform: scaleX(-1);
+    }
+    100%{
+        transform: scaleX(1);
+    }
 }

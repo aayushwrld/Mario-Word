@@ -1,8 +1,30 @@
-let homeBtn = document.getElementById("home-button-image")
+let homeBtn = document.getElementById("home-button-image");
 const nameInputLabel = document.getElementById('label');
-let pressEnter = document.getElementById('username-submission')
+let pressEnter = document.getElementById('username-submission');
+let theme1btn = document.getElementById('theme-1');
+let theme2btn = document.getElementById('theme-2');
+let theme = document.querySelector(".choose-theme")
+sessionStorage.setItem("theme", "")
+let bgmAudio = new Audio("./assets/background-music.mp3")
+bgmAudio.volume = 0.6;
+bgmAudio.play()
+bgmAudio.loop = true
+
+theme.style.pointerEvents = "none";
 
 pressEnter.style.display = 'none';
+theme.style.opacity = 0;
+let marioImage = document.getElementById("mario");
+
+
+setInterval(()=>{
+    setTimeout(()=>{
+        marioImage.setAttribute("src","./assets/Mario Walk - Fall/MarioStandLarge.png");
+        marioImage.style.paddingTop="8px";
+    },300)
+    marioImage.setAttribute("src","./assets/Mario Walk - Fall/MarioWalkLarge.png");
+    marioImage.style.paddingTop="12px";
+},600)
 
 
 homeBtn.addEventListener("click",() => {
@@ -19,6 +41,8 @@ const storedName = sessionStorage.getItem('userName');
 if (storedName) {
     // If the name is already stored, hide the input box
     nameInputContainer.style.display = 'none';
+    theme.style.opacity = 1;
+    theme.style.pointerEvents = "auto";
     nameInputed.innerHTML = "You have already entered your name! <br> You can proceed with the game!"
 } else {
     // If the name is not stored, listen for Enter key press
@@ -30,8 +54,9 @@ if (storedName) {
             nameInputContainer.style.display = 'none'; 
             nameInputed.innerHTML = "You have entered your name!<br> Proceed with the game!";
             pressEnter.style.display = 'none';
+            theme.style.opacity = 1;   
+            theme.style.pointerEvents = "auto";
 
-    // Hide the input box
         }
     });
 }
@@ -43,7 +68,6 @@ nameInput.addEventListener('input', function () {
         // Remove the label by hiding it
         nameInputLabel.style.display = 'none';
         pressEnter.style.display = 'block';
-
     } else {
         // If the input is empty, display the label
         nameInputLabel.style.display = 'block';
@@ -51,3 +75,38 @@ nameInput.addEventListener('input', function () {
     }
 });
 
+theme1btn.addEventListener("click",() => {
+    window.open("./game.html", "_self")
+    sessionStorage.setItem("theme", "general")
+})
+theme2btn.addEventListener("click",() => {
+    window.open("./game.html", "_self")
+    sessionStorage.setItem("theme", "mario")
+
+})
+
+// Get references to the elements
+let questionButtonImage = document.getElementById("question-button-image");
+let questionsAnswersDiv = document.querySelector(".questions-answers");
+questionsAnswersDiv.style.opacity = 0;
+
+let isVisible = false;
+
+// Add a click event listener to the question button image
+questionButtonImage.addEventListener("click", function() {
+    // Toggle the visibility by changing opacity
+    if (isVisible) {
+        questionsAnswersDiv.style.opacity = 0;
+        isVisible = false;
+    } else {
+        questionsAnswersDiv.style.opacity = 1;
+        isVisible = true;
+    }
+});
+
+document.addEventListener("click", function(e) {
+    if (isVisible && !questionsAnswersDiv.contains(e.target) && e.target !== questionButtonImage) {
+        questionsAnswersDiv.style.opacity = 0;
+        isVisible = false;
+    }
+});

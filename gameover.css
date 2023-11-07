@@ -13,6 +13,7 @@ body{
     height: 100vh;
     width: 100vw;
     cursor: url('./assets/cursor-default.png'), auto;
+
 }
 
 .clouds{
@@ -49,6 +50,30 @@ body{
     100% {
         transform: translateX(110vw)
     }
+}
+.home-button{
+    position: absolute;
+    padding: 20px;
+    z-index: 1;
+    display: flex;
+    width: 97%;
+    justify-content: space-between;
+}
+
+.home-button img:hover{
+    cursor: url('./assets/cursor-pointer.png'), auto;
+
+    transform: scale(1.1);
+}
+
+.home-button img:active{
+    transform: scale(0.95);
+}
+
+.home-button img{
+    height: 55px;
+    width: 55px;
+    transition: all 0.2s;
 }
 
 .headings{
@@ -112,7 +137,7 @@ body{
 }
 
 #mario{
-    width: 90px;
+    width: 100px;
     animation: mario-walking 25s linear 0.8s infinite ;
 }
 
@@ -131,133 +156,5 @@ body{
     }
     100%{
         transform: scaleX(1);
-    }
-}
-
-
-
-@media (max-width:  768px) and (min-width: 0px){
-    body{
-        background-size: cover;
-        height: 100vh;
-    }
-
-    #mario{
-        width: 70px;
-    }
-
-    .mario-image{
-        margin-top: 12vh;
-        margin-left: 10vw;
-    }
-
-    .clouds{
-        height: 15vh;
-    }
-
-    #cloud1{
-        animation: cloud 15s linear infinite;
-    } 
-
-    #cloud2{
-        animation: cloud 12s linear infinite;
-        width: 70px;
-
-    } #cloud3{
-        animation: cloud 18s linear infinite;
-        width: 80px;
-    }
-
-    .headings{
-        margin-top: 5vh;
-    }
-
-    .main-heading{
-    font-size: 3rem;
-    -webkit-text-stroke-width: 3.5px;
-    align-self: center;
-    justify-self: center;
-    line-height: 60px;
-    }
-
-    #play-button{
-        margin-top: 10vh;
-    }
-
-    #play-button span{
-        font-size: 2rem;
-        color: white;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: black;
-    }
-
-    .instructions-button span{
-        font-size: 1.5rem;
-        color: white;
-        -webkit-text-stroke-width: 1.8px;
-        -webkit-text-stroke-color: black;
-    }
-}
-
-@media (max-width:  1025px) and (min-width:  768px) {
-    body{
-        background-size: cover;
-        height: 100vh;
-    }
-
-    #mario{
-        width: 90px;
-    }
-    .mario-image{
-        margin-top: 12vh;
-        margin-left: 10vw;
-    }
-
-    .clouds{
-        height: 15vh;
-    }
-
-    #cloud1{
-        animation: cloud 15s linear infinite;
-    } 
-
-    #cloud2{
-        animation: cloud 12s linear infinite;
-        width: 70px;
-
-    } 
-    #cloud3{
-        animation: cloud 18s linear infinite;
-        width: 80px;
-    }
-
-    .headings{
-        margin-top: 5vh;
-    }
-
-    .main-heading{
-    font-size: 4rem;
-    -webkit-text-stroke-width: 3.5px;
-    align-self: center;
-    justify-self: center;
-    line-height: 60px;
-    }
-
-    #play-button{
-        margin-top: 10vh;
-    }
-
-    #play-button span{
-        font-size: 3rem;
-        color: white;
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: black;
-    }
-
-    .instructions-button span{
-        font-size: 2.5rem;
-        color: white;
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: black;
     }
 }
