@@ -162,7 +162,63 @@ let wordListGeneral = [
     {
         word: "cricket",
         hint: "A sport, very popular!"
-    }
+    },
+    {
+        word: "chatgpt",
+        hint: "A popular AI Tool"
+    },
+    {
+        word: "chess",
+        hint: "A board game, 2 players."
+    },
+    {
+        word: "cat",
+        hint: "An animal!"
+    },
+    {
+        word: "nike",
+        hint: "A popular shoe company!"
+    },
+    {
+        word: "keyboard",
+        hint: "A tool which is in front of you right now!"
+    },
+    {
+        word: "ludo",
+        hint: "A popular 4 player board game!"
+    },
+    {
+        word: "kalvium",
+        hint: "The best undergrad CSE Program."
+    },
+    {
+        word: "linux",
+        hint: "A popular open-source OS."
+    },
+    {
+        word: "css",
+        hint: "Stylesheet to enhance document UI."
+    },
+    {
+        word: "telescope",
+        hint: "Optical instrument, for distant observations."
+    },
+    {
+        word: "moon",
+        hint: "Earth's natural satellite."
+    },
+    {
+        word: "mystery",
+        hint: "Something which can't be explained."
+    },
+    {
+        word: "mars",
+        hint: "Where Elon wants to go!"
+    },
+    {
+        word: "big data",
+        hint: "Large Scale data analysis."
+    },
 ]
 
 // giving chosen list in a variable so its easier to navigate
@@ -192,6 +248,11 @@ let splitWord = wordGenerated.split("")
 let winningDetectArr = splitWord.filter(element => element !== ' ');
 let letterKeyboard = document.querySelectorAll(".letter-keyboard")
 
+//creating a function that will choose random no. to generate random sound
+function randomSound(){
+    let numRandom = Math.ceil(Math.random()*2)
+    return numRandom
+}
 
 //creating an event listener such that whenever a letter is clicked it compares it with the letters in the word generated
 letterKeyboard.forEach((e)=>{
@@ -299,12 +360,6 @@ endbtn.addEventListener("click",() => {
 
 
 //major functions of the page
-
-//creating a function that will choose random no. to generate random sound
-function randomSound(){
-    let numRandom = Math.ceil(Math.random()*2)
-    return numRandom
-}
 
 //creating function to generate random word of the list
 function randomWord(){

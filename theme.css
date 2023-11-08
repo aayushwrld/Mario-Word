@@ -144,7 +144,7 @@ body{
 }
 
 .username-label{
-    z-index: -1;
+    z-index: -3;
     position: absolute;
     top: 0;
     font-size: 1.5em;
