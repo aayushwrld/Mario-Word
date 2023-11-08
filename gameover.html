@@ -8,21 +8,32 @@
     <title>Mario Word</title>
 </head>
 <body>
+<!-- defining the parent div -->
 <div class="parent">
+
+    <!-- adding home button so user can navigate back -->
     <div class="home-button">
         <img id="home-button-image" src="./assets/home-button.png" alt="" >
     </div>
+
+    <!-- creating the clouds -->
     <div class="clouds">
-    <img src="./assets/cloud1.png" alt="cloud1" id="cloud1">
-    <img src="./assets/cloud2.png" alt="cloud2" id="cloud2">
-    <img src="./assets/cloud1.png" alt="cloud3" id="cloud3">
+        <img src="./assets/cloud1.png" alt="cloud1" id="cloud1">
+        <img src="./assets/cloud2.png" alt="cloud2" id="cloud2">
+        <img src="./assets/cloud1.png" alt="cloud3" id="cloud3">
     </div>
+
+    <!-- creating main content of the webpage -->
     <div class="headings">
-        <div class="main-heading"><span>You Won!</span></div>
+        <div class="main-heading"><span></span></div>
+        <div class="correct-score"></div>
+        <div class="incorrect-score"></div>
         <div id="play-button"><span>Play Again</span></div>
     </div>
+
+    <!-- placing the mario image -->
     <div class="mario-image">
-    <img src="./assets/Mario Walk - Fall/MarioWalkLarge.png" alt="" id="mario">
+        <img src="./assets/Mario Walk - Fall/MarioWalkLarge.png" alt="" id="mario">
     </div>
 </div>
 <script src="./gameover.js"></script>

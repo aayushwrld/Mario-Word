@@ -147,7 +147,7 @@ body{
     }
 
     .mario-image{
-        margin-top: 12vh;
+        margin-top: 10vh;
         margin-left: 10vw;
     }
 
@@ -157,15 +157,19 @@ body{
 
     #cloud1{
         animation: cloud 15s linear infinite;
+        top: 15px;
     } 
 
     #cloud2{
         animation: cloud 12s linear infinite;
         width: 70px;
-
-    } #cloud3{
+        top: 10px;
+    }
+    
+    #cloud3{
         animation: cloud 18s linear infinite;
         width: 80px;
+        top: 13px;
     }
 
     .headings{

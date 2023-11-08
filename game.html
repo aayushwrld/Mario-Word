@@ -8,14 +8,17 @@
     <title>Mario Word</title>
 </head>
 <body>
-    <div class="result-play-again">
-        <div id="play-button"><span>Next Word</span>
-        </div>
-    </div>
+<!-- defining the parent div -->
 <div class="parent">
+
+    <!-- adding navbar -->
     <div class="right-buttons">
+        
+        <!-- displaying the username of the player -->
         <img src="./assets/username.png" alt="" id="username-img">
         <div id="username"></div>
+
+        <!-- adding a question button for the users doubts -->
         <img src="./assets/question-icon.png" alt="" id="question-button-image">
     </div>
     <div class="questions-answers">
@@ -25,29 +28,40 @@
         <br>
         <span id="answer-points">•	Select a letter from the layout given to you below.</span>
         <br><br>
-        <span id="answer-points">•	You have maximum of 5 tries, before mario jumps into the spikes.</span>
+        <span id="answer-points">•	You have maximum of 3 tries, before mario jumps into the spikes.</span>
         <br><br>
-        <span id="answer-points">•	Hints will be provided as you play!</span>
+        <span id="answer-points">•	Hint is provided to you!</span>
         </div>
     </div>
+
+    <!-- adding the stars(tries) which represent how many tries are left -->
     <div class="stars">
         <img src="./assets/star-yellow.png" alt="" id="star-img">
         <img src="./assets/star-yellow.png" alt="" id="star-img">
         <img src="./assets/star-yellow.png" alt="" id="star-img">
     </div>
+
+    <!-- adding hints for the user -->
     <div class="hints">
         <span><b>Hint!</b></span>
-        <span id="hint">These are the in-game currency and you collect them!</span>
+        <span id="hint"></span>
     </div>
+
+    <!-- creating the clouds -->
     <div class="clouds">
         <img src="./assets/cloud1.png" alt="cloud1" id="cloud1">
         <img src="./assets/cloud2.png" alt="cloud2" id="cloud2">
         <img src="./assets/cloud1.png" alt="cloud3" id="cloud3">
     </div>
     
+    <!-- creating a parent div for certain elements -->
 <div class="flex">
+
+    <!-- creating div for word which we have to guess -->
     <div class="word">
     </div>
+
+    <!-- creating div for the virtual keyboard -->
 <div class="parent-keyboard">
     <div class="parent-keyboard-row-1">
     <div id='q' class="letter-keyboard keyboard-row-1">
@@ -138,16 +152,31 @@
 </div>
 </div>
 </div>
-    <div class="mario-image">
+
+<!-- placing the mario image -->
+<div class="mario-image">
         <img src="./assets/Mario Walk - Fall/MarioStandLarge.png" alt="" id="mario">
-    </div> 
-    <div class="plank">
-        <img src="./assets/plank.png" alt="">
+</div> 
+
+<!-- creating plank image on which mario will walk -->
+<div class="plank">
+    <img src="./assets/plank.png" alt="">
+</div>
+
+<!-- creating buttons for playing again or ending the game -->
+<div class="buttons">
+    <div class="play-again-button">
+        <span>New Word?</span>
     </div>
-    
-    <div class="spikes">
-        <img src="./assets/spikes.png" alt="">
+    <div class="end-button">
+        <span>End Game!</span>
     </div>
+</div>
+
+<!-- creating the spikes on which mario will fall -->
+<div class="spikes">
+    <img src="./assets/spikes.png" alt="">
+</div>
 </div>
     <script src="game.js"></script>
 </body>

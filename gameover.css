@@ -56,7 +56,7 @@ body{
     padding: 20px;
     z-index: 1;
     display: flex;
-    width: 97%;
+    width: 20%;
     justify-content: space-between;
 }
 
@@ -85,9 +85,9 @@ body{
 }
 
 .main-heading{
-    font-size: 5rem;
+    font-size: 3rem;
     color: yellow;
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
     animation: color-change 6s linear infinite alternate-reverse;
 }
@@ -156,5 +156,63 @@ body{
     }
     100%{
         transform: scaleX(1);
+    }
+}
+
+@media (max-width:  768px) and (min-width: 0px){
+    body{
+        background-size: cover;
+        height: 100vh;
+    }
+    #mario{
+        width: 70px;
+    }
+
+    .mario-image{
+        margin-top: 10vh;
+        margin-left: 10vw;
+    }
+
+    .clouds{
+        height: 15vh;
+    }
+
+    #cloud1{
+        animation: cloud 15s linear infinite;
+        top: 15px;
+    } 
+
+    #cloud2{
+        animation: cloud 12s linear infinite;
+        width: 70px;
+        top: 10px;
+    }
+    
+    #cloud3{
+        animation: cloud 18s linear infinite;
+        width: 80px;
+        top: 13px;
+    }
+
+    .headings{
+        margin-top: 5vh;
+    }
+
+    .main-heading span{
+        font-size: 0.8em;
+    }
+    #play-button span{
+        font-size:2.3em;
+        line-height: 40px;
+    }
+
+    .home-button{
+        padding: 10px;
+        width: 20%;
+
+    }
+    .home-button img{
+        width: 40px;
+        height: 40px;
     }
 }

@@ -8,11 +8,16 @@
     <title>Mario Word</title>
 </head>
 <body>
+<!-- defining the parent div -->
 <div class="parent">
+    
+    <!-- adding home button so user can navigate back -->
     <div class="home-button">
         <img id="home-button-image" src="./assets/home-button.png" alt="" >
+
+    <!-- adding a question button for the users doubts -->
         <img src="./assets/question-icon.png" alt="" id="question-button-image">
-    </div>
+        </div>
     <div class="questions-answers">
         <div class="answers">
         <span>What do you have to do?</span>
@@ -24,19 +29,27 @@
         <span id="answer-points">•	After entering your username, you can choose the theme of the word you want, and the game will start!</span>
         </div>
     </div>
+
+    <!-- creating the clouds -->
     <div class="clouds">
         <img src="assets/cloud1.png" alt="cloud1" id="cloud1">
         <img src="assets/cloud2.png" alt="cloud2" id="cloud2">
         <img src="assets/cloud1.png" alt="cloud3" id="cloud3">
     </div>
+
+    <!-- creating main content of the webpage -->
     <div class="headings">
-            <div class="username-group">
-                <input type="text" class="username-input" id="username" autocomplete="off" required>
+
+    <!-- creating username functionality -->
+    <div class="username-group">
+                <input type="text" class="username-input" name="username" id="username" autocomplete="off" required>
                 <label class="username-label" id="label" >Enter Name</label>
-            </div>
-                <p id="username-filled"></p>
-                <p id="username-submission">Press <i>Enter</i> to submit!</p>
     </div>
+        <p id="username-filled"></p>
+        <p id="username-submission">Press <i>Enter</i> to submit!</p>
+    </div>
+
+    <!-- creating theme choosing content -->
     <div class="choose-theme">
         <div class="theme-heading"><span>Choose Theme</span></div>
         <div class="themes">
@@ -44,9 +57,13 @@
             <img src="./assets/theme-2.png" alt="" id="theme-2">
         </div>
     </div>
+
+    <!-- placing the mario image -->
     <div class="mario-image">
         <img src="./assets/Mario Walk - Fall/MarioStandLarge.png" alt="" id="mario">
     </div>
+
+
 </div>
     <script src="theme.js"></script>
 </body>
